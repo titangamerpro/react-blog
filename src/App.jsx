@@ -1,17 +1,20 @@
-import Footer from "./components/Footer"
-import Header from "./components/Header"
-import Home from "./components/Home"
+import { Routes, Route, Link } from "react-router-dom"
 import Layout from "./components/Layout"
 
 import { posts } from "./utils/blog"
+import Home from "./components/Home"
 
 
 function App() {
 
   return (
-    <>
-     <Layout posts={posts} />
-    </>
+    <Routes>
+     <Route path="/"
+      element={<Layout />}
+     >
+     <Route index element={<Home posts={posts}/>} />
+     </Route>
+    </Routes>
   )
 }
 

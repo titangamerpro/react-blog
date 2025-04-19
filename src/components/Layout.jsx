@@ -3,6 +3,7 @@ import Header from './Header'
 import Nav from './Nav'
 import Home from './Home'
 import Footer from './Footer'
+import { Outlet } from 'react-router-dom'
 
 
 const Layout = ({posts}) => {
@@ -10,7 +11,7 @@ const Layout = ({posts}) => {
     <div className='app'>
         <Header/>
         <Nav/>
-        <Home posts={posts} />
+        <Outlet />
         <Footer/>
     </div>
   )
