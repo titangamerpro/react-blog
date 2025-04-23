@@ -9,13 +9,13 @@ const Nav = () => {
       </form>
       <ul className="menu">
         <li className="item">
-            <Link className="link">Home</Link>
+            <Link to="/" className="link">Home</Link>
         </li>
         <li className="item">
             <Link className="link">Post</Link>
         </li>
         <li className="item">
-            <Link className="link">About</Link>
+            <Link to="/about" className="link">About</Link>
         </li>
       </ul>
     </nav>

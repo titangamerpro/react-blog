@@ -80,5 +80,7 @@ main {
   flex: 0.5;
 }
 
+.post {
 
-
+  flex: 1;
+}

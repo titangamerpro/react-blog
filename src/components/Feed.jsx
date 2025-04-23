@@ -1,13 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Feed = ({posts}) => {
   return (
     <ul>
         {posts.length ? (
-            posts.map(item => (
-                <li className="item" key={item.id}>
-                    {item.body}
-                </li>
+            posts.map(post => (
+                <Link to={`post/${post.id}`} className="item" key={post.id}>
+                    {post.body}
+                </Link>
             ))
         ) : (
             <p className="empty">
