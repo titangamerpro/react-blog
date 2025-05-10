@@ -3,11 +3,16 @@ import { Link } from 'react-router-dom'
 
 const Feed = ({posts}) => {
   return (
-    <ul>
+    <article className='post'>
         {posts.length ? (
             posts.map(post => (
                 <Link to={`post/${post.id}`} className="item" key={post.id}>
-                    {post.body}
+                    <h2 className='post-title'>{post.title} </h2>
+                    <span className='post-data'> {post.datetime} </span>
+                    <p className='post-body'> {
+                    post.body.length<= 25 ? post.body : `${(post.body).slice(0,25)}...`
+                    }</p>
+                   
                 </Link>
             ))
         ) : (
@@ -15,7 +20,7 @@ const Feed = ({posts}) => {
                 post not display
             </p>
         )}
-    </ul>
+    </article>
   )
 }
 

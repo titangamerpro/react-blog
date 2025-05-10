@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 
 
 const Post = ({posts}) => {
+    console.log(posts);
     const {id} = useParams()
     const post = posts.find(post => post.id === id)
     console.log(id);
@@ -10,7 +11,7 @@ const Post = ({posts}) => {
     <article className='post'>
         {post && 
             <>
-                <h2>{post.title} </h2>
+                <h2 className='post-title'>{post.title} </h2>
                 <p className="postdata">
                     {post.datetime}
                 </p>
@@ -21,8 +22,8 @@ const Post = ({posts}) => {
         } {
             !post &&
             <main>
-                <h2>post not faund</h2>
-                <Link to="/" >visit to home page</Link>
+                <h2 className='error-post'>post not faund</h2>
+                <Link to="/" className='error-link' >visit to home page</Link>
             </main>
         }
     </article>

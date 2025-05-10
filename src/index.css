@@ -84,3 +84,38 @@ main {
 
   flex: 1;
 }
+
+.item {
+  margin: 25px 15px;
+  display: block;
+}
+
+.post-data {
+  display: block;
+  margin: 15px 0;
+}
+
+.post-body {
+  font-size: 20px;
+}
+
+.post-title {
+  font-size: 30px;
+}
+
+.error-post {
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  color: red;
+}
+
+
+.error-link {
+  display: block;
+  width: 250px;
+  margin: 20px auto 0;
+  font-size: 20px;
+  font-weight: 700;
+}
