@@ -1,13 +1,13 @@
 import React from 'react'
 import Feed from './Feed';
 
-const Home = ({posts}) => {
-    console.log(posts);
+const Home = ({allPosts}) => {
+    // console.log(posts);
 
   return (
     <>
     <main >
-    <Feed posts={posts} />
+    <Feed posts={allPosts} />
     </main>
     
     </>

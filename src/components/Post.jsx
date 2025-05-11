@@ -2,11 +2,11 @@ import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 
 
-const Post = ({posts}) => {
-    console.log(posts);
+const Post = ({allPosts, handlDelete}) => {
+    // console.log(posts);
     const {id} = useParams()
-    const post = posts.find(post => post.id === id)
-    console.log(id);
+    const post = allPosts.find(post => (post.id).toString() === id)
+    // console.log(post);
   return (
     <article className='post'>
         {post && 
@@ -18,6 +18,7 @@ const Post = ({posts}) => {
                 <p className="postbody">
                     {post.body}
                 </p>
+                <button onClick={() => handlDelete(post.id)} className='delete' >Delete post</button>
             </>
         } {
             !post &&

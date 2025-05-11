@@ -6,13 +6,13 @@ import Footer from './Footer'
 import { Outlet } from 'react-router-dom'
 
 
-const Layout = ({posts}) => {
+const Layout = ({allPosts}) => {
   return (
     <div className='app'>
         <Header/>
         <Nav/>
         <Outlet />
-        <Footer/>
+        <Footer posts={allPosts} Length={allPosts.length} />
     </div>
   )
 }
