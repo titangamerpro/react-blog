@@ -19,6 +19,7 @@ const Post = ({allPosts, handlDelete}) => {
                     {post.body}
                 </p>
                 <button onClick={() => handlDelete(post.id)} className='delete' >Delete post</button>
+                <button  className='btn-fixed' >Fixed post</button>
             </>
         } {
             !post &&

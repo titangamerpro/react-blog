@@ -5,7 +5,7 @@ const Footer = ({posts, Length}) => {
   return (
     <footer className='footer'>
       <p className="total-post">
-        Total {Length} posts
+        Total {Length} {Length <=1 ? "post": "posts"} 
       </p>
       <p className="year">
         {year.getFullYear()}

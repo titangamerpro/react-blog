@@ -155,3 +155,16 @@ main {
   text-transform: capitalize;
   cursor: pointer;
 }
+
+.btn-fixed {
+  height: 48px;
+  min-width: 48px;
+  border-radius: 5px;
+  padding: 8px;
+  background: #06ff00;
+  font-size: 18px;
+  color: #242b34;
+  text-transform: capitalize;
+  cursor: pointer;
+  margin: 0 10px;
+}
