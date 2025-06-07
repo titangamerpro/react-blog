@@ -1,10 +1,11 @@
 import React from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams, useNavigate } from 'react-router-dom'
 
 
 const Post = ({allPosts, handlDelete}) => {
     // console.log(posts);
     const {id} = useParams()
+    const navigate = useNavigate()
     const post = allPosts.find(post => (post.id).toString() === id)
     // console.log(post);
   return (
@@ -19,7 +20,7 @@ const Post = ({allPosts, handlDelete}) => {
                     {post.body}
                 </p>
                 <button onClick={() => handlDelete(post.id)} className='delete' >Delete post</button>
-                <button  className='btn-fixed' >Fixed post</button>
+                <button  className='btn-fixed' onClick={() => navigate(`/edit/${post.id}`)} >Fixed post</button>
             </>
         } {
             !post &&

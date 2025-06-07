@@ -7,6 +7,8 @@ import { useState, useEffect } from "react"
 import { posts } from "./utils/blog"
 import NewPost from "./components/NewPost"
 import { format } from "date-fns"
+import EditPost from "./components/EditPost"
+
 
 
 
@@ -63,8 +65,15 @@ function App() {
      <Route index element={<Home allPosts={allPosts}/>} />
       <Route 
         path="post"
-        element={<NewPost/>}
+        element={<NewPost 
+          postTitle={postTitle}
+          postBody={postBody}
+          setPostTitle={setPostTitle}
+          setPostBody={setPostBody}
+          handleSubmit={handleSubmit}
+        />}
       />
+      <Route path="edit/:id" element={<EditPost/>} />
      <Route path="post">
      
       <Route path=':id' element={<Post  handlDelete={handlDelete} allPosts={allPosts}/>} />
