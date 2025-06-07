@@ -73,7 +73,7 @@ function App() {
           handleSubmit={handleSubmit}
         />}
       />
-      <Route path="edit/:id" element={<EditPost/>} />
+      <Route path="edit/:id" element={<EditPost allPosts={allPosts} setAllPosts={setAllPosts} />} />
      <Route path="post">
      
       <Route path=':id' element={<Post  handlDelete={handlDelete} allPosts={allPosts}/>} />
