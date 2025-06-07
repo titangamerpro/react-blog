@@ -168,3 +168,63 @@ main {
   cursor: pointer;
   margin: 0 10px;
 }
+
+/* Container */
+.newPost {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Заголовок */
+.newPost h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+}
+
+/* Форма */
+.newFormPost {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Метки */
+.newFormPost label {
+  font-weight: bold;
+}
+
+/* Инпуты */
+.newFormPost input,
+.newFormPost textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+}
+
+/* Кнопка */
+.newFormPost button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #2c7be5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.newFormPost button:hover:not(:disabled) {
+  background-color: #1a68d1;
+}
+
+.newFormPost button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
