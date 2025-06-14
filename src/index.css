@@ -228,3 +228,10 @@ main {
   background-color: #999;
   cursor: not-allowed;
 }
+
+.not-found {
+  text-align: center;
+  font-size: 35px;
+  text-transform: uppercase;
+  padding: 20px 10px;
+}
