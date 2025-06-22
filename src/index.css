@@ -189,6 +189,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 0 15px;
 }
 
 /* Метки */
@@ -234,4 +235,13 @@ main {
   font-size: 35px;
   text-transform: uppercase;
   padding: 20px 10px;
+}
+
+#postBody {
+  min-height: 200px;
+  resize: none;
+}
+
+.container {
+  padding: 15px;
 }
